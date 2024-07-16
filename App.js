@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
-const parent = React.createElement("div" , {} , 
-    React.createElement("div" , {id : "parent"} , React.createElement("h1" , {} , "I'm h1 tag")),
-    React.createElement("h2" , {id : "child"} , "I'm an h3 tag") ,
-    React.createElement("p" , {id : "child"} , "Pragraph created")
-)
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
+const heading = React.createElement("h1" , {id: "heading"}, "Hello World From React JS");
 
-root.render(parent);
+const jsxHeading = <h1>hello world from JSX</h1>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(jsxHeading) 
