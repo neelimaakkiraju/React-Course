@@ -1,18 +1,29 @@
 import React from "react";
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1" , {id: "heading"}, "Hello World From React JS");
-
-const NewComponent2 = () => (
-    <h1>New component</h1>
-)
-const NewComponent = () => (
-    <div>
-         <h1>New Functional component</h1>
-         <NewComponent2/>
+const HeadComponent = () => {
+  return (
+    <div className="head-container">
+      <img
+        src="https://png.pngtree.com/template/20191014/ourmid/pngtree-pin-food-delivery-map-location-delivery-logo-concept-image_318151.jpg"
+        alt="Logo"
+        className="logo"
+      />
+      
+      <div className="navbar">
+      <ul>
+        <li>Home</li>
+        <li>Contact us</li>
+        <li>About</li>
+        <li>Cart</li>
+      </ul>
+      </div>
+      
+    
+      
     </div>
-)
-const jsxHeading = <h1>hello world from JSX</h1>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<NewComponent/>) 
+root.render(<HeadComponent/>);
