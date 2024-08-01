@@ -1,13 +1,37 @@
 .logo{
-    height:150px;
-    width:150px;
+    height:120px;
+    width:120px;
+   
 
 }
 .head-container{
     display:flex;
     padding: 10px;
-   
+    justify-content: space-between;
+    border:solid black;
 }
-.nav-container{
+.nav-container > ul{
     display: flex;
+}
+.nav-container > ul > li{
+    padding: 10px;
+    list-style-type:none;
+    margin: 10px;
+    font-size: 20px;
+}
+.res-container{
+    height: 250px;
+    width:170px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+.res-container:hover{
+    border: solid black;
+}
+.card-img{
+    height:100px;
+    width: 170px;
+  
+
 }
