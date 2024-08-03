@@ -25,8 +25,8 @@ const HeadComponent = () => {
 
 const RestCard = () => {
   return (
-    <div>
-      <div className="res-container">
+    <div  className="res-container"> 
+      <div>
       <img src="https://cdn.pixabay.com/photo/2024/02/10/00/53/biryani-8563961_1280.jpg" className="card-img"/>
 
       <h3>Neelima Foods</h3>
@@ -43,8 +43,20 @@ const BodyComponent = () => {
       <div className="search-bar">
         <h3>Search Bar</h3>
       </div>
-      <div>
+      <div className="res-body">
         <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        <RestCard />
+        
       </div>
     </div>
   );

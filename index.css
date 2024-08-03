@@ -25,6 +25,8 @@
     padding: 10px;
     background-color: #f0f0f0;
     border-radius: 5px;
+    display: flex;
+    margin:10px;
 }
 .res-container:hover{
     border: solid black;
@@ -34,4 +36,8 @@
     width: 170px;
   
 
+}
+.res-body{
+    display: flex;
+    flex-wrap: wrap;
 }
