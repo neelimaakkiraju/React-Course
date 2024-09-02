@@ -23,14 +23,16 @@ const HeadComponent = () => {
   );
 };
 
-const RestCard = () => {
+const RestCard = (props) => {
+  const {resName,cuisine} = props;
+  
   return (
     <div  className="res-container"> 
       <div>
       <img src="https://cdn.pixabay.com/photo/2024/02/10/00/53/biryani-8563961_1280.jpg" className="card-img"/>
 
-      <h3>Neelima Foods</h3>
-      <h4>South Indian Special</h4>
+      <h3>{resName}</h3>
+      <h4>{cuisine}</h4>
       <p>4.5 Star Rating</p>
       <p>30 Minutes</p>
     </div>
@@ -44,18 +46,9 @@ const BodyComponent = () => {
         <h3>Search Bar</h3>
       </div>
       <div className="res-body">
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
-        <RestCard />
+        <RestCard resName="Meghana Foods" cuisine="South indian special"/>
+        <RestCard resName="Fast Foods" cuisine="North indian special"/>
+        
         
       </div>
     </div>
