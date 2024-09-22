@@ -1,10 +1,22 @@
 import RestCard from "./RestCard";
 import resObj from "../utils/mockData";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const BodyComponent = () => {
 
-  const [resList, setresList] = useState(resObj)
+  const [resList, setresList] = useState()
+
+  useEffect(()=>{
+    fetchData()
+
+  },[])
+  const fetchData = async () => {
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+    const json = await data.json();
+    console.log(json)
+    setresList(json.data.cards)
+  }
+  
     return (
       <div className="body-container">
         <div className="search-bar">
