@@ -17,6 +17,7 @@ const BodyComponent = () => {
     console.log(json)
     setresList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   }
+  
   if (resList.length===0){
     return <ShimmerComponent />
      
