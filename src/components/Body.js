@@ -1,6 +1,7 @@
 import RestCard from "./RestCard";
 import resObj from "../utils/mockData";
 import { useState,useEffect } from "react";
+import ShimmerComponent from "./Shimmer.js";
 
 const BodyComponent = () => {
 
@@ -17,9 +18,8 @@ const BodyComponent = () => {
     setresList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   }
   if (resList.length===0){
-    return(
-      <h1>Loading.....</h1>
-    )
+    return <ShimmerComponent />
+     
   }
   
     return (
