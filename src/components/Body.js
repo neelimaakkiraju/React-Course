@@ -18,12 +18,9 @@ const BodyComponent = () => {
     setresList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   }
   
-  if (resList.length===0){
-    return <ShimmerComponent />
-     
-  }
   
-    return (
+  
+    return (resList.length===0)? <ShimmerComponent /> : (
       <div className="body-container">
         <div className="search-bar">
          <button className="search-btn"
