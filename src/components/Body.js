@@ -6,6 +6,7 @@ import ShimmerComponent from "./Shimmer.js";
 const BodyComponent = () => {
 
   const [resList, setresList] = useState([])
+  const [searchFilter]= useState()
 
   useEffect(()=>{
     fetchData()
@@ -17,18 +18,25 @@ const BodyComponent = () => {
     console.log(json)
     setresList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   }
-  
-  
-  
     return (resList.length===0)? <ShimmerComponent /> : (
       <div className="body-container">
         <div className="search-bar">
+        <div className="search-btn">
+            <input type="text"></input>
+            <button onChange={(
+              filteredList
+            )=>{
+
+            }}>Search</button>
+          </div>
          <button className="search-btn"
          onClick={()=> {
         const filteredList = resList.filter((resta)=> resta.info.avgRating>4.5);
         setresList(filteredList)
          }}
           >Top Rated Restaurants</button>
+
+          
         </div>
         <div className="res-body">
           {
