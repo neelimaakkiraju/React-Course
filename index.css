@@ -55,3 +55,9 @@
     margin:10px;
     background-color: #f0f0f0;
 }
+.login-btn{
+    height:20px;
+    margin-top: 50px;
+    padding: auto;
+    cursor: pointer;
+}
