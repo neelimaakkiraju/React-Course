@@ -25,7 +25,7 @@ const BodyComponent = () => {
         <div className="search-bar">
          <button className="search-btn"
          onClick={()=> {
-        const filteredList = resList.filter((resta)=> resta.info.avgRating<4);
+        const filteredList = resList.filter((resta)=> resta.info.avgRating>4.5);
         setresList(filteredList)
          }}
           >Top Rated Restaurants</button>
