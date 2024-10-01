@@ -6,7 +6,7 @@ import ShimmerComponent from "./Shimmer.js";
 const BodyComponent = () => {
 
   const [resList, setresList] = useState([])
-  const [searchFilter]= useState()
+  const [searchText, setSearchText]= useState("")
 
   useEffect(()=>{
     fetchData()
@@ -22,12 +22,13 @@ const BodyComponent = () => {
       <div className="body-container">
         <div className="search-bar">
         <div className="search-btn">
-            <input type="text"></input>
-            <button onChange={(
-              filteredList
-            )=>{
-
+            <input type="text"  value={searchText} onChange={(e)=>{setSearchText(e.target.value)
+}}></input>
+            <button onClick={()=> {
+              const updatedList = resList.filter((resta)=> resta.info.name.toLowerCase().includes(searchText.toLowerCase()))
+              setresList(updatedList)
             }}>Search</button>
+            
           </div>
          <button className="search-btn"
          onClick={()=> {

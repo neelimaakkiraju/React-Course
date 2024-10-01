@@ -61,10 +61,10 @@
     background-color: #f0f0f0;
 }
 .login-btn{
-    height:20px;
-    margin-top: 50px;
-    padding: auto;
+    margin: 40px;
+    padding: 10px;
     cursor: pointer;
+    
 }
 .search-bar{
     display: flex;
