@@ -6,6 +6,9 @@ import ShimmerComponent from "./Shimmer.js";
 const BodyComponent = () => {
 
   const [resList, setresList] = useState([])
+
+  const [updatedSerch, setUpdatedSearch] = useState([])
+
   const [searchText, setSearchText]= useState("")
 
   useEffect(()=>{
@@ -17,6 +20,7 @@ const BodyComponent = () => {
     const json = await data.json();
     console.log(json)
     setresList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+    setUpdatedSearch(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   }
     return (resList.length===0)? <ShimmerComponent /> : (
       <div className="body-container">
@@ -26,7 +30,7 @@ const BodyComponent = () => {
 }}></input>
             <button onClick={()=> {
               const updatedList = resList.filter((resta)=> resta.info.name.toLowerCase().includes(searchText.toLowerCase()))
-              setresList(updatedList)
+              setUpdatedSearch(updatedList)
             }}>Search</button>
             
           </div>
@@ -41,7 +45,7 @@ const BodyComponent = () => {
         </div>
         <div className="res-body">
           {
-            resList.map((res)=> (
+            updatedSerch.map((res)=> (
               <RestCard key={res.info.id} resData={res}/>
             ))
           }
