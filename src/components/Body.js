@@ -3,6 +3,7 @@ import resObj from "../utils/mockData";
 import { useState,useEffect } from "react";
 import ShimmerComponent from "./Shimmer.js";
 
+
 const BodyComponent = () => {
 
   const [resList, setresList] = useState([])
