@@ -1,5 +1,6 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -20,8 +21,8 @@ const [BtnName, setBtnName] = useState(["Login"])
         <div className="nav-container">
           <ul>
             <li>Home</li>
-            <li>Contact us</li>
-            <li>About</li>
+            <li><a href="/contact">Contact Us</a></li> 
+           <li><a href="/about">About</a></li> 
             <li>Cart</li>
           </ul>
         </div>
