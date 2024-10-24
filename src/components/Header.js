@@ -20,9 +20,9 @@ const [BtnName, setBtnName] = useState(["Login"])
         </div>
         <div className="nav-container">
           <ul>
-            <li>Home</li>
-            <li><a href="/contact">Contact Us</a></li> 
-           <li><a href="/about">About</a></li> 
+          <li><Link to="/">Home</Link></li> 
+            <li><Link to="/contact">Contact Us</Link></li> 
+           <li><Link to="/about">About</Link></li> 
             <li>Cart</li>
           </ul>
         </div>
