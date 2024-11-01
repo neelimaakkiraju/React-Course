@@ -2,7 +2,7 @@ import RestCard from "./RestCard";
 import resObj from "../utils/mockData";
 import { useState,useEffect } from "react";
 import ShimmerComponent from "./Shimmer.js";
-
+import { Link } from "react-router-dom";
 
 const BodyComponent = () => {
 
@@ -37,8 +37,8 @@ const BodyComponent = () => {
           </div>
          <button className="search-btn"
          onClick={()=> {
-        const filteredList = resList.filter((resta)=> resta.info.avgRating>4);
-        setresList(filteredList)
+        const filteredList = resList.filter((resta)=> resta.info.avgRating>4.5);
+        setUpdatedSearch(filteredList)
          }}
           >Top Rated Restaurants</button>
 
@@ -47,7 +47,9 @@ const BodyComponent = () => {
         <div className="res-body">
           {
             updatedSerch.map((res)=> (
-              <RestCard key={res.info.id} resData={res}/>
+              <Link
+              key={res.info.id} 
+              to={"/restaurant/" + res.info.id}><RestCard resData={res}/></Link>
             ))
           }
         </div>
