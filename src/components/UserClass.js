@@ -1,13 +1,25 @@
 import React from "react";
 
 class UserComponent extends React.Component{
+    constructor(props){
+        super(props)
+      this.state={
+        count: 0
+      }
+    }
+
+  
     render(){
+
+        const {name,location,contact} = this.props;
+        const {count} = this.state
         return(
-            <div>
-                <h1>About</h1>
-                <h2>Name:Neelima</h2>
-                <h2>Location: India</h2>
-                <h2>Contact:453253537</h2>
+            <div className="classComp">
+               <h1>Class Component</h1>
+               <h2>Count:{count}</h2>
+                <h2>Name:{name}</h2>
+                <h2>Location:{location}</h2>
+                <h2>Contact:{contact}</h2>
             </div>
         )
     }
