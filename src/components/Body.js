@@ -3,6 +3,7 @@ import resObj from "../utils/mockData";
 import { useState,useEffect } from "react";
 import ShimmerComponent from "./Shimmer.js";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const BodyComponent = () => {
 
@@ -11,6 +12,8 @@ const BodyComponent = () => {
   const [updatedSerch, setUpdatedSearch] = useState([])
 
   const [searchText, setSearchText]= useState("")
+  
+  const onlineStatus = useOnlineStatus()
 
   useEffect(()=>{
     fetchData()
@@ -23,6 +26,9 @@ const BodyComponent = () => {
     setresList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
     setUpdatedSearch(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   }
+    if (onlineStatus === false){
+      return <h1>You're offline,please check your internet connection</h1>
+    }
     return (resList.length===0)? <ShimmerComponent /> : (
       <div className="body-container">
         <div className="search-bar">
