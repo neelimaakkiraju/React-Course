@@ -13,15 +13,15 @@ const onlineStatus = useOnlineStatus()
 
 
     return (
-      <div className="head-container">
+      <div className="flex bg-purple-50">
         <div>
           <img
             src={LOGO_URL}
             alt="Logo"
-            className="logo"
+            className="w-28"
           />
         </div>
-        <div className="nav-container">
+        <div className="">
           <ul>
             <li>Online Status : {onlineStatus ? "🟢"  : "🔴"}</li>
           <li><Link to="/">Home</Link></li> 
