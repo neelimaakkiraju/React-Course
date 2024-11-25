@@ -13,7 +13,7 @@ const onlineStatus = useOnlineStatus()
 
 
     return (
-      <div className="flex bg-purple-50">
+      <div className="flex bg-purple-50 justify-between">
         <div>
           <img
             src={LOGO_URL}
@@ -21,14 +21,14 @@ const onlineStatus = useOnlineStatus()
             className="w-28"
           />
         </div>
-        <div className="">
-          <ul>
-            <li>Online Status : {onlineStatus ? "🟢"  : "🔴"}</li>
-          <li><Link to="/">Home</Link></li> 
-            <li><Link to="/contact">Contact Us</Link></li> 
-           <li><Link to="/about">About</Link></li> 
-           <li><Link to="/grocery">Grocery</Link></li> 
-            <li>Cart</li>
+        <div>
+          <ul  className="flex m-8 text-lg">
+            <li className="p-3 m-3 hover:underline decoration-2">Online Status : {onlineStatus ? "🟢"  : "🔴"}</li>
+          <li className="p-3 m-3 hover:underline decoration-2"><Link to="/">Home</Link></li> 
+            <li className="p-3 m-3 hover:underline decoration-2"><Link to="/contact">Contact Us</Link></li> 
+           <li className="p-3 m-3 hover:underline decoration-2"><Link to="/about">About</Link></li> 
+           <li className="p-3 m-3 hover:underline decoration-2"><Link to="/grocery">Grocery</Link></li> 
+            <li className="p-3 m-3 hover:underline decoration-2">Cart</li>
           </ul>
         </div>
         
