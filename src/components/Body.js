@@ -50,7 +50,7 @@ const BodyComponent = () => {
 
           
         </div>
-        <div className="res-body">
+        <div className="flex flex-wrap gap-4 bg-slate-500">
           {
             updatedSerch.map((res)=> (
               <Link
