@@ -14,7 +14,7 @@ const RestCard = (props) => {
               {IMG_URL +
           cloudinaryImageId}
             
-            className="w-[200px] h-[250px] self-center"
+            className="w-[200px] h-[250px] self-center my-2"
           />
           <h3 className="text-wrap font-semibold text-lg">{name}</h3>
           <p className="text-wrap text-sm  text-gray-500">{cuisines.join(", ")}</p>
