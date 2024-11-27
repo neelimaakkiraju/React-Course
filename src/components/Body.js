@@ -30,27 +30,29 @@ const BodyComponent = () => {
       return <h1>You're offline,please check your internet connection</h1>
     }
     return (resList.length===0)? <ShimmerComponent /> : (
-      <div className="body-container">
-        <div className="search-bar">
-        <div className="search-btn">
-            <input type="text"  value={searchText} onChange={(e)=>{setSearchText(e.target.value)
+      <div className="body-container ">
+        <div>
+        <div className="flex gap-3 m-3 ">
+            <input  className="border border-black rounded-md px-2 text-sm w-72" type="text" placeholder="Search for food and restaurants"  value={searchText} onChange={(e)=>{setSearchText(e.target.value)
 }}></input>
-            <button onClick={()=> {
+            <button className="border border-black px-3  rounded-md hover:bg-purple-50 text-sm py-1" onClick={()=> {
               const updatedList = resList.filter((resta)=> resta.info.name.toLowerCase().includes(searchText.toLowerCase()))
               setUpdatedSearch(updatedList)
+              
             }}>Search</button>
-            
-          </div>
-         <button className="search-btn"
+             <button className="border border-black px-3 rounded-md hover:bg-purple-50 text-sm"
          onClick={()=> {
         const filteredList = resList.filter((resta)=> resta.info.avgRating>4.5);
         setUpdatedSearch(filteredList)
          }}
           >Top Rated Restaurants</button>
 
+            
+          </div>
+        
           
         </div>
-        <div className="flex flex-wrap gap-4 bg-slate-500">
+        <div className="flex flex-wrap gap-4">
           {
             updatedSerch.map((res)=> (
               <Link
