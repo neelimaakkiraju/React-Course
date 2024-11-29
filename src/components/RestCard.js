@@ -25,4 +25,16 @@ const RestCard = (props) => {
      
     );
   };
+  export const withPromotedLabel = (RestCard)=> {
+    return (props)=>{
+      return(
+        <div>
+          <label>Promoted</label>
+          <RestCard {...props}/>
+        </div>
+      )
+
+    }
+  }
+
   export default RestCard;

@@ -1,9 +1,10 @@
-import RestCard from "./RestCard";
+import RestCard , {withPromotedLabel} from "./RestCard";
 import resObj from "../utils/mockData";
 import { useState,useEffect } from "react";
 import ShimmerComponent from "./Shimmer.js";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
+import { withPromotedLabel } from "./RestCard.js";
 
 const BodyComponent = () => {
 
@@ -15,6 +16,8 @@ const BodyComponent = () => {
   
   const onlineStatus = useOnlineStatus()
 
+  const IsPromoted = withPromotedLabel(RestCard)
+ 
   useEffect(()=>{
     fetchData()
 
@@ -57,7 +60,13 @@ const BodyComponent = () => {
             updatedSerch.map((res)=> (
               <Link
               key={res.info.id} 
-              to={"/restaurant/" + res.info.id}><RestCard resData={res}/></Link>
+              to={"/restaurant/" + res.info.id}>
+                {
+                  res.info.veg ? (<IsPromoted resData={res}/>): ( <RestCard resData={res}/>)
+                  
+                }
+                
+               </Link>
             ))
           }
         </div>
