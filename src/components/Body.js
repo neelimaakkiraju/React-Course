@@ -62,7 +62,7 @@ const BodyComponent = () => {
               key={res.info.id} 
               to={"/restaurant/" + res.info.id}>
                 {
-                  res.info.veg ? (<IsPromoted resData={res}/>): ( <RestCard resData={res}/>)
+                  res.info.isOpen ? (<IsPromoted resData={res}/>): ( <RestCard resData={res}/>)
                   
                 }
                 
