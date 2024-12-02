@@ -7,7 +7,7 @@ const RestCard = (props) => {
     const {name,cuisines,avgRating,costForTwo,sla,cloudinaryImageId} = resData?.info
   
     return (
-      <div className="flex flex-col truncate w-[220px] p-4 h-full border rounded-md bg-gray-50 shadow-lg  hover:bg-purple-50 m-2  transform transition-transform duration-300 hover:scale-105">
+      <div className="flex flex-col truncate w-[220px] p-4 h-full border rounded-md bg-gray-50 shadow-lg  hover:bg-purple-50 m-2 ">
        
           <img
             src=
@@ -28,8 +28,8 @@ const RestCard = (props) => {
   export const withPromotedLabel = (RestCard)=> {
     return (props)=>{
       return(
-        <div>
-          <label>Promoted</label>
+        <div className="">
+          <label className="absolute m-2 bg-slate-600 text-white p-1 text-sm rounded-sm">20% OFF</label>
           <RestCard {...props}/>
         </div>
       )
