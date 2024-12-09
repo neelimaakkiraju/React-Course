@@ -4,14 +4,12 @@ import ItemsList from "./ItemsList";
 const ResCategory = ({data}) => {
 
 console.log(data)
-    return <div className="">
-    <div className="bg-gray-200 p-2 flex-row  justify-between rounded-md shadow-xl">
-    <span >{data.title} ({data.itemCards.length})</span>
+    return <div className="bg-gray-100 shadow-xl rounded-md">
+    <div className="m-4 px-5 flex justify-between ">
+    <span className="font-bold text-lg">{data.title} ({data.itemCards.length})</span>
     <span>⬇️</span>
-    <ItemsList items={data.itemCards}/>
     </div>
-   
-    
+    <div><ItemsList items={data.itemCards}/></div>
     </div>
 }
 
