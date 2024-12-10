@@ -6,6 +6,8 @@ import useResMenu from "../utils/useResMenu";
 import ResCategory from "./ResCategory";
 
 const ResMenu = () => {
+
+  const [showIndex , setShowIndex] = useState(null)
   
   const {id} = useParams()
   const resData = useResMenu(id)
@@ -37,7 +39,9 @@ const ResMenu = () => {
       <p className="font-bold">{cuisines.join(", ")} - {costForTwoMessage}</p>
       <div className="grid mx-auto gap-4 w-1/2">
       {
-      categories.map((category) => (<ResCategory data={category?.card?.card}/>)
+      categories.map((category , index) => (<ResCategory data={category?.card?.card} 
+      showItems={index=== showIndex ? true : false}
+      setShowIndex={()=>setShowIndex(index)}/>)
          
       )
      }
