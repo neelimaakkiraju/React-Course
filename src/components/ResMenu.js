@@ -7,7 +7,9 @@ import ResCategory from "./ResCategory";
 
 const ResMenu = () => {
 
-  const [showIndex , setShowIndex] = useState(null)
+  const [showIndex , setShowIndex] = useState(null);
+
+  const [hideIndex,setHideIndex] = useState(null)
   
   const {id} = useParams()
   const resData = useResMenu(id)

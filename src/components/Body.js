@@ -16,7 +16,7 @@ const BodyComponent = () => {
   
   const onlineStatus = useOnlineStatus()
 
-  const IsPromoted = withPromotedLabel(RestCard)
+  const IsPromoted = withPromotedLabel(RestCard) 
  
   useEffect(()=>{
     fetchData()
@@ -55,11 +55,11 @@ const BodyComponent = () => {
         
           
         </div>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap p-4 gap-4">
           {
             updatedSerch.map((res)=> (
               <Link
-              key={res.info.id} 
+              key={res.info.id} className=""
               to={"/restaurant/" + res.info.id}>
                 {
                   res.info.
