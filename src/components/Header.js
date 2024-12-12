@@ -1,8 +1,8 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
+import UserContext from "../utils/userContext";
 
 
 const HeadComponent = () => {
@@ -10,7 +10,8 @@ const HeadComponent = () => {
 const [BtnName, setBtnName] = useState(["Login"])
 
 const onlineStatus = useOnlineStatus()
-
+const {loggedInUser} = useContext(UserContext)
+console.log(loggedInUser)
 
     return (
       <div className="flex bg-amber-100 justify-between h-20 items-center px-4">
@@ -37,6 +38,7 @@ const onlineStatus = useOnlineStatus()
   }}>
    {BtnName}
   </button>
+  <li className=" hover:underline decoration-2 hover:text-rose-800">{loggedInUser}</li>
   </div>
      
     );
