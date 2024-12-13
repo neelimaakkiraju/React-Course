@@ -1,10 +1,11 @@
 import RestCard , {withPromotedLabel} from "./RestCard";
 import resObj from "../utils/mockData";
-import { useState,useEffect } from "react";
+import { useState,useEffect,useContext } from "react";
 import ShimmerComponent from "./Shimmer.js";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
 import { withPromotedLabel } from "./RestCard.js";
+import UserContext from "../utils/userContext.js";
 
 const BodyComponent = () => {
 
@@ -32,6 +33,9 @@ const BodyComponent = () => {
     if (onlineStatus === false){
       return <h1>You're offline,please check your internet connection</h1>
     }
+
+    const{loggedInUser,setUserName}=useContext(UserContext)
+
     return (resList.length===0)? <ShimmerComponent /> : (
       <div className="body-container ">
         <div>
@@ -50,8 +54,13 @@ const BodyComponent = () => {
          }}
           >Top Rated Restaurants</button>
 
-            
+<div>
+<label>UserName</label>
+            <input type="text" className="border border-black" value={loggedInUser} onChange={(e) => setUserName(e.target.value)}></input>
+           
           </div>
+          </div>
+         
         
           
         </div>
