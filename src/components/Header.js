@@ -3,9 +3,14 @@ import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/userContext";
+import { useSelector } from "react-redux";
 
 
 const HeadComponent = () => {
+
+
+
+const cartItems = useSelector((store)=>store.cart.items)
 
 const [BtnName, setBtnName] = useState(["Login"])
 
@@ -27,7 +32,7 @@ console.log(loggedInUser)
             <li className=" hover:underline decoration-2 hover:text-rose-800"><Link to="/contact">Contact Us</Link></li> 
            <li className=" hover:underline decoration-2 hover:text-rose-800"><Link to="/about">About</Link></li> 
            <li className=" hover:underline decoration-2 hover:text-rose-800"><Link to="/grocery">Grocery</Link></li> 
-            <li className=" hover:underline decoration-2 hover:text-rose-800">Cart</li>
+           <li className=" hover:underline decoration-2 hover:text-rose-800"><Link to="/cart">Cart - {cartItems.length} Items</Link></li> 
           </ul>
         </div>
         
