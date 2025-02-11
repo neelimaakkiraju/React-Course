@@ -19,7 +19,7 @@ const {loggedInUser} = useContext(UserContext)
 console.log(loggedInUser)
 
     return (
-      <div className="flex bg-amber-100 justify-between h-20 items-center px-4">
+      <div className="flex bg-[#ffdbdc] justify-between h-20 items-center px-4 text-[#3a4664]  text-sm">
         <div className="flex items-center gap-4">
           <img
             src={LOGO_URL}
@@ -27,12 +27,12 @@ console.log(loggedInUser)
             className="h-14 w-14 rounded-full"
           />
           <ul  className="flex text-md gap-6">
-            <li className=" hover:underline decoration-2 hover:text-rose-800">Online Status : {onlineStatus ? "🟢"  : "🔴"}</li>
-          <li className="  hover:underline decoration-2 hover:text-rose-800"><Link to="/">Home</Link></li> 
-            <li className=" hover:underline decoration-2 hover:text-rose-800"><Link to="/contact">Contact Us</Link></li> 
-           <li className=" hover:underline decoration-2 hover:text-rose-800"><Link to="/about">About</Link></li> 
-           <li className=" hover:underline decoration-2 hover:text-rose-800"><Link to="/grocery">Grocery</Link></li> 
-           <li className=" hover:underline decoration-2 hover:text-rose-800"><Link to="/cart">Cart - {cartItems.length} Items</Link></li> 
+            <li className=" hover:underline decoration-2 ">Online Status : {onlineStatus ? "🟢"  : "🔴"}</li>
+          <li className="  hover:underline decoration-2 "><Link to="/">Home</Link></li> 
+            <li className=" hover:underline decoration-2 "><Link to="/contact">Contact Us</Link></li> 
+           <li className=" hover:underline decoration-2 "><Link to="/about">About</Link></li> 
+           <li className=" hover:underline decoration-2 "><Link to="/grocery">Grocery</Link></li> 
+           <li className=" hover:underline decoration-2 "><Link to="/cart">Cart - {cartItems.length} Items</Link></li> 
           </ul>
         </div>
         
