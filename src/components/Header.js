@@ -19,7 +19,7 @@ const {loggedInUser} = useContext(UserContext)
 console.log(loggedInUser)
 
     return (
-      <div className="flex bg-[#ffdbdc] justify-between h-20 items-center px-4 text-[#3a4664]  text-sm">
+      <div className="flex bg-[#e9f5db] justify-between h-20 items-center px-4 text-[#3a4664]  text-sm shadow-lg">
         <div className="flex items-center gap-4">
           <img
             src={LOGO_URL}
@@ -32,7 +32,7 @@ console.log(loggedInUser)
             <li className=" hover:underline decoration-2 "><Link to="/contact">Contact Us</Link></li> 
            <li className=" hover:underline decoration-2 "><Link to="/about">About</Link></li> 
            <li className=" hover:underline decoration-2 "><Link to="/grocery">Grocery</Link></li> 
-           <li className=" hover:underline decoration-2 "><Link to="/cart">Cart - {cartItems.length} Items</Link></li> 
+           <li className=" hover:underline decoration-2 "><Link to="/cart">🛒Cart - {cartItems.length} Items</Link></li> 
           </ul>
         </div>
         

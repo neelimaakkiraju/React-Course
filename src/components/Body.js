@@ -37,17 +37,17 @@ const BodyComponent = () => {
     const{loggedInUser,setUserName}=useContext(UserContext)
 
     return (resList.length===0)? <ShimmerComponent /> : (
-      <div className="body-container ">
+      <div className="body-container">
         <div>
         <div className="flex gap-3 m-3 ">
-            <input  className="border border-black rounded-md px-2 text-sm w-72" type="text" placeholder="Search for food and restaurants"  value={searchText} onChange={(e)=>{setSearchText(e.target.value)
+            <input  className="border border-black rounded-md px-2 text-[13px] w-72" type="text" placeholder="Search for food and restaurants"  value={searchText} onChange={(e)=>{setSearchText(e.target.value)
 }}></input>
-            <button className="border border-black px-3  rounded-md hover:bg-purple-50 text-sm py-1" onClick={()=> {
+            <button className="border border-black px-3  rounded-md hover:bg-purple-50 text-[13px] py-1" onClick={()=> {
               const updatedList = resList.filter((resta)=> resta.info.name.toLowerCase().includes(searchText.toLowerCase()))
               setUpdatedSearch(updatedList)
               
             }}>Search</button>
-             <button className="border border-black px-3 rounded-md hover:bg-purple-50 text-sm"
+             <button className="border border-black px-3 rounded-md hover:bg-purple-50 text-[13px]"
          onClick={()=> {
         const filteredList = resList.filter((resta)=> resta.info.avgRating>4.5);
         setUpdatedSearch(filteredList)
@@ -55,8 +55,8 @@ const BodyComponent = () => {
           >Top Rated Restaurants</button>
 
 <div>
-<label>UserName</label>
-            <input type="text" className="border border-black" value={loggedInUser} onChange={(e) => setUserName(e.target.value)}></input>
+<label className="text-[13px] p-2">UserName</label>
+            <input type="text" className="border border-black rounded-md py-1 text-[13px]" value={loggedInUser} onChange={(e) => setUserName(e.target.value)}></input>
            
           </div>
           </div>

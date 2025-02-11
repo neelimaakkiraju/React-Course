@@ -11,7 +11,7 @@ const RestCard = (props) => {
   const { loggedInUser } = useContext(UserContext);
 
   return (
-    <div className="flex flex-col truncate w-[220px]  rounded-xl justify-center p-2  hover:bg-[#ffdbdc] bg-gray-50 border-[0.5px] border-gray-200 gap-4">
+    <div className="flex flex-col truncate w-[220px]  rounded-md justify-center p-2  hover:bg-gray-100 hover:border-[#e9f5db] gap-4 shadow-lg">
       <div className="relative ">
         <label className="absolute my-2 px-4 py-2 bg-black bg-opacity-50 border-[0.5px] border-white text-white text-sm font-semibold rounded-br-xl">
           20% OFF
@@ -73,7 +73,7 @@ const RestCard = (props) => {
         </div>
 
         <p className="text-sm tracking-tight py-2">{cuisines.join(", ")}</p>
-        <p>username:{loggedInUser}</p>
+        {/* <p>username:{loggedInUser}</p> */}
       </div>
     </div>
   );
