@@ -7,7 +7,7 @@ const RestCard = (props) => {
 
   const { name, cuisines, avgRating, costForTwo, sla, cloudinaryImageId } =
     resData?.info;
-
+console.log(resData)
   const { loggedInUser } = useContext(UserContext);
 
   return (
