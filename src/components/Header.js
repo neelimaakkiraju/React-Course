@@ -39,7 +39,7 @@ console.log(loggedInUser)
         
  
   <button className="border border-black px-4 py-2 h-10  rounded-md hover:bg-purple-50" onClick={()=>{
-    BtnName==="Login"?setBtnName("Logout"):setBtnName("Login")
+    BtnName==="Logout"?setBtnName("Login"):setBtnName("Logout")
   }}>
    {BtnName}
   </button>
