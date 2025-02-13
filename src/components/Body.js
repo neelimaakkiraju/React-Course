@@ -1,4 +1,4 @@
-import RestCard , {withPromotedLabel} from "./RestCard";
+import RestCard  from "./RestCard";
 import resObj from "../utils/mockData";
 import { useState,useEffect,useContext } from "react";
 import ShimmerComponent from "./Shimmer.js";
@@ -27,8 +27,8 @@ const BodyComponent = () => {
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
     const json = await data.json();
     console.log(json)
-    setresList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
-    setUpdatedSearch(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+    setresList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setUpdatedSearch(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
     if (onlineStatus === false){
       return <h1>You're offline,please check your internet connection</h1>
@@ -36,11 +36,11 @@ const BodyComponent = () => {
 
     const{loggedInUser,setUserName}=useContext(UserContext)
 
-    return (resList.length===0)? <ShimmerComponent /> : (
+    return (resList?.length===0)? <ShimmerComponent /> : (
       <div className="body-container">
         <div>
         <div className="flex gap-3 m-3 ">
-            <input  className="border border-black rounded-md px-2 text-[13px] w-72" type="text" placeholder="Search for food and restaurants"  value={searchText} onChange={(e)=>{setSearchText(e.target.value)
+            <input data-testid="inputId" className="border border-black rounded-md px-2 text-[13px] w-72" type="text" placeholder="Search for food and restaurants"  value={searchText} onChange={(e)=>{setSearchText(e.target.value)
 }}></input>
             <button className="border border-black px-3  rounded-md hover:bg-purple-50 text-[13px] py-1" onClick={()=> {
               const updatedList = resList.filter((resta)=> resta.info.name.toLowerCase().includes(searchText.toLowerCase()))
@@ -66,7 +66,7 @@ const BodyComponent = () => {
         </div>
         <div className="flex flex-wrap p-4 gap-4">
           {
-            updatedSerch.map((res)=> (
+            updatedSerch?.map((res)=> (
               <Link
               key={res.info.id} className=""
               to={"/restaurant/" + res.info.id}>
