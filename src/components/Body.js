@@ -26,7 +26,7 @@ const BodyComponent = () => {
   const fetchData = async () => {
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
     const json = await data.json();
-    console.log(json)
+    // console.log(json)
     setresList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setUpdatedSearch(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
@@ -43,13 +43,13 @@ const BodyComponent = () => {
             <input data-testid="inputId" className="border border-black rounded-md px-2 text-[13px] w-72" type="text" placeholder="Search for food and restaurants"  value={searchText} onChange={(e)=>{setSearchText(e.target.value)
 }}></input>
             <button className="border border-black px-3  rounded-md hover:bg-purple-50 text-[13px] py-1" onClick={()=> {
-              const updatedList = resList.filter((resta)=> resta.info.name.toLowerCase().includes(searchText.toLowerCase()))
+              const updatedList = resList?.filter((resta)=> resta.info.name.toLowerCase().includes(searchText.toLowerCase()))
               setUpdatedSearch(updatedList)
               
             }}>Search</button>
              <button className="border border-black px-3 rounded-md hover:bg-purple-50 text-[13px]"
          onClick={()=> {
-        const filteredList = resList.filter((resta)=> resta.info.avgRating>4.5);
+        const filteredList = resList.filter((resta)=> resta?.info?.avgRating>4.5);
         setUpdatedSearch(filteredList)
          }}
           >Top Rated Restaurants</button>
@@ -72,7 +72,7 @@ const BodyComponent = () => {
               to={"/restaurant/" + res.info.id}>
                 {
                   res.info.
-                  aggregatedDiscountInfoV3 ? (<IsPromoted resData={res}/>): ( <RestCard resData={res}/>)
+                  aggregatedDiscountInfoV3 ? (<IsPromoted resData={res} />): ( <RestCard resData={res} />)
                   
                 }
                 

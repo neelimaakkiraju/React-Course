@@ -7,12 +7,12 @@ const RestCard = (props) => {
 
   const { name, cuisines, avgRating, costForTwo, sla, cloudinaryImageId } =
     resData?.info;
-// console.log(resData)
+  console.log(resData);
   const { loggedInUser } = useContext(UserContext);
 
   return (
     <div className="flex flex-col truncate w-[220px]  rounded-md justify-center p-2  hover:bg-gray-100 hover:border-[#e9f5db] gap-4 shadow-lg">
-      <div className="relative ">
+      <div className="relative">
         <label className="absolute my-2 px-4 py-2 bg-black bg-opacity-50 border-[0.5px] border-white text-white text-sm font-semibold rounded-br-xl">
           20% OFF
         </label>
@@ -33,7 +33,7 @@ const RestCard = (props) => {
         </h3>
         <div className="flex gap-2 text-gray-800">
           <h5 className="flex gap-1 items-center">
-            <svg
+            {/* <svg
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -65,7 +65,7 @@ const RestCard = (props) => {
                   <stop offset="1" stopColor="#128540"></stop>
                 </linearGradient>
               </defs>
-            </svg>
+            </svg> */}
             {avgRating + " Stars"}
           </h5>
 
@@ -81,7 +81,7 @@ const RestCard = (props) => {
 export const withPromotedLabel = (RestCard) => {
   return (props) => {
     return (
-      <div className="">
+      <div data-testid="resCard">
         <RestCard {...props} />
       </div>
     );
