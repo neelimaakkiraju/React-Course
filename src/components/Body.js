@@ -47,9 +47,9 @@ const BodyComponent = () => {
               setUpdatedSearch(updatedList)
               
             }}>Search</button>
-             <button className="border border-black px-3 rounded-md hover:bg-purple-50 text-[13px]"
+             <button data-testid="topRated" className="border border-black px-3 rounded-md hover:bg-purple-50 text-[13px]"
          onClick={()=> {
-        const filteredList = resList.filter((resta)=> resta?.info?.avgRating>4.5);
+        const filteredList = resList?.filter((resta)=> resta?.info?.avgRating>4.5);
         setUpdatedSearch(filteredList)
          }}
           >Top Rated Restaurants</button>
@@ -64,7 +64,7 @@ const BodyComponent = () => {
         
           
         </div>
-        <div className="flex flex-wrap p-4 gap-4">
+        <div className="flex flex-wrap p-4 gap-4" data-testid="resCard">
           {
             updatedSerch?.map((res)=> (
               <Link

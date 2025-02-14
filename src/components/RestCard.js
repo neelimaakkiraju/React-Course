@@ -11,7 +11,7 @@ const RestCard = (props) => {
   const { loggedInUser } = useContext(UserContext);
 
   return (
-    <div className="flex flex-col truncate w-[220px]  rounded-md justify-center p-2  hover:bg-gray-100 hover:border-[#e9f5db] gap-4 shadow-lg">
+    <div data-testid="resCard" className="flex flex-col truncate w-[220px]  rounded-md justify-center p-2  hover:bg-gray-100 hover:border-[#e9f5db] gap-4 shadow-lg">
       <div className="relative">
         <label className="absolute my-2 px-4 py-2 bg-black bg-opacity-50 border-[0.5px] border-white text-white text-sm font-semibold rounded-br-xl">
           20% OFF
@@ -81,7 +81,7 @@ const RestCard = (props) => {
 export const withPromotedLabel = (RestCard) => {
   return (props) => {
     return (
-      <div data-testid="resCard">
+      <div>
         <RestCard {...props} />
       </div>
     );
