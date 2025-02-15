@@ -27,7 +27,7 @@ test("header should contain cart with 0 value",()=>{
    </BrowserRouter>
   )
 
-   const cartBtn = screen.getByText("🛒Cart - 0 Items")
+   const cartBtn = screen.getByText("Cart - 0 Items")
    expect(cartBtn).toBeInTheDocument()
 }) 
 

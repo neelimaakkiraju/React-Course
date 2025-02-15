@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1739533408777" clover="3.2.0">
-  <project timestamp="1739533408777" name="All files">
-    <metrics statements="33" coveredstatements="31" conditionals="6" coveredconditionals="5" methods="13" coveredmethods="12" elements="52" coveredelements="48" complexity="0" loc="33" ncloc="33" packages="1" files="2" classes="2"/>
-    <file name="Body.js" path="C:\Users\neeli\Documents\React-Course\src\components\Body.js">
-      <metrics statements="24" coveredstatements="22" conditionals="6" coveredconditionals="5" methods="10" coveredmethods="9"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="12" count="7" type="stmt"/>
-      <line num="14" count="7" type="stmt"/>
-      <line num="16" count="7" type="stmt"/>
-      <line num="18" count="7" type="stmt"/>
-      <line num="20" count="7" type="stmt"/>
-      <line num="22" count="7" type="stmt"/>
-      <line num="23" count="2" type="stmt"/>
-      <line num="26" count="7" type="stmt"/>
-      <line num="27" count="2" type="stmt"/>
-      <line num="28" count="2" type="stmt"/>
-      <line num="30" count="2" type="stmt"/>
-      <line num="31" count="2" type="stmt"/>
-      <line num="33" count="7" type="cond" truecount="1" falsecount="1"/>
-      <line num="34" count="0" type="stmt"/>
-      <line num="37" count="7" type="stmt"/>
-      <line num="39" count="7" type="cond" truecount="2" falsecount="0"/>
-      <line num="43" count="1" type="stmt"/>
-      <line num="46" count="8" type="stmt"/>
-      <line num="47" count="1" type="stmt"/>
-      <line num="52" count="8" type="stmt"/>
-      <line num="53" count="1" type="stmt"/>
-      <line num="59" count="0" type="stmt"/>
-      <line num="70" count="25" type="stmt"/>
-    </file>
-    <file name="RestCard.js" path="C:\Users\neeli\Documents\React-Course\src\components\RestCard.js">
-      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="6" count="26" type="stmt"/>
-      <line num="9" count="26" type="stmt"/>
-      <line num="10" count="26" type="stmt"/>
-      <line num="11" count="26" type="stmt"/>
-      <line num="13" count="26" type="stmt"/>
-      <line num="81" count="2" type="stmt"/>
-      <line num="82" count="7" type="stmt"/>
-      <line num="83" count="19" type="stmt"/>
-    </file>
+<coverage generated="1739615201492" clover="3.2.0">
+  <project timestamp="1739615201492" name="All files">
+    <metrics statements="33" coveredstatements="33" conditionals="10" coveredconditionals="7" methods="11" coveredmethods="11" elements="54" coveredelements="51" complexity="0" loc="33" ncloc="33" packages="2" files="4" classes="4"/>
+    <package name="components">
+      <metrics statements="32" coveredstatements="32" conditionals="10" coveredconditionals="7" methods="11" coveredmethods="11"/>
+      <file name="Header.js" path="C:\Users\neeli\Documents\React-Course\src\components\Header.js">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="13" count="15" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="42" count="1" type="cond" truecount="1" falsecount="1"/>
+      </file>
+      <file name="ItemsList.js" path="C:\Users\neeli\Documents\React-Course\src\components\ItemsList.js">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+      </file>
+      <file name="ResMenu.js" path="C:\Users\neeli\Documents\React-Course\src\components\ResMenu.js">
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="32" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="44" count="20" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="appStore.js" path="C:\Users\neeli\Documents\React-Course\src\utils\appStore.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

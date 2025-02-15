@@ -41,7 +41,7 @@ const ResMenu = () => {
       <p className="font-bold">{cuisines.join(", ")} - {costForTwoMessage}</p>
       <div className="grid mx-auto gap-4 w-1/2">
       {
-      categories.map((category , index) => (<ResCategory data={category?.card?.card} 
+      categories.map((category , index) => (<ResCategory key={index} data={category?.card?.card} 
       showItems={index=== showIndex ? true : false}
       setShowIndex={()=>setShowIndex(index)}/>)
          

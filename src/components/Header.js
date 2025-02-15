@@ -32,7 +32,7 @@ console.log(loggedInUser)
             <li className=" hover:underline decoration-2 "><Link to="/contact">Contact Us</Link></li> 
            <li className=" hover:underline decoration-2 "><Link to="/about">About</Link></li> 
            <li className=" hover:underline decoration-2 "><Link to="/grocery">Grocery</Link></li> 
-           <li className=" hover:underline decoration-2 "><Link to="/cart">🛒Cart - {cartItems.length} Items</Link></li> 
+           <li className=" hover:underline decoration-2 "><Link to="/cart">Cart - {cartItems.length} Items</Link></li> 
           </ul>
         </div>
         
