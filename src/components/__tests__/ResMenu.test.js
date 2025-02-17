@@ -5,6 +5,7 @@ import appStore from "../../utils/appStore"
 import { act } from "@testing-library/react";
 import MockData from "../mocks/resMenuMock.json"
 import HeadComponent from "../Header";
+import Cart from "../Cart"
 import "@testing-library/jest-dom"
 import { BrowserRouter } from "react-router-dom";
 
@@ -28,6 +29,7 @@ global.fetch = jest.fn(() => {
 <Provider store={appStore}>
         <HeadComponent/>
         <ResMenu/>
+        <Cart/>
        </Provider>
         </BrowserRouter>
        
@@ -45,6 +47,10 @@ global.fetch = jest.fn(() => {
     expect(screen.getByText("Cart - 1 Items")).toBeInTheDocument()
     fireEvent.click(addBtn[1])
     expect(screen.getByText("Cart - 2 Items")).toBeInTheDocument()
+    expect(screen.getAllByTestId("foodItems").length).toBe(7)
+
+    fireEvent.click(screen.getByRole("button",{name:"Clear Cart"}))
+    expect(screen.getByText("Your cart is empty,Add some items!!!!")).toBeInTheDocument()
 
 
     })
